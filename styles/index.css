@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa');
 
-* {
-    font-family: "Nunito", Arial, sans-serif;
+/* Variables */
+:root {
+    --title-size: 100px; /* Size of  */
+
+    --teal: #558985; /* Cursor color */
 }
+
+* { font-family: "Comfortaa", Arial, sans-serif; }
 
 body, html {
     height: 100%;
@@ -11,13 +17,13 @@ body, html {
 }
 
 .bg-image {
-    /*background-image: url('/images/background.jpg');*/
     height: 100%;
     background-size: cover;
     position: relative;
     color: white;
 
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('/images/background.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('/images/background.jpg') center no-repeat;
+    background-size: cover;
 }
 
 .bg-text {
@@ -67,4 +73,52 @@ body, html {
 
 .bg-text button:active {
     background-color: #50817e;
+}
+
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0 30px;
+}
+
+.navbar button {
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: capitalize;
+    height: 90px;
+    min-width: 120px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar button:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Animation */
+.cursor {
+    display: inline-block;
+    width: 3px;
+    height: 100px;
+    margin-left: 4px;
+    background: var(--teal);
+}
+
+.cursor.blink {
+    animation: blink 0.8s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        background: var(--teal);
+    }
+    40%, 50% {
+        background: transparent;
+    }
 }
