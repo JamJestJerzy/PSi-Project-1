@@ -1,4 +1,4 @@
-/* Settings */
+/* ---------------- [ Typing animation ] ---------------- */
 const writeCooldown = 2000;
 const eraseCooldown = 1000;
 
@@ -39,7 +39,63 @@ const type = () => {
         setTimeout(erase, writeCooldown);
     }
 }
+/* ---------------- [ Typing animation ] ---------------- */
 
-$(function (){
-    type();
-})
+
+let activeSection = "homepage";
+const setActiveSection = (section) => {
+    if (section === activeSection) return;
+    if (activeSection) $("#" + activeSection).removeClass(".active");
+    activeSection = section;
+    $("#" + section).addClass(".active");
+}
+
+
+
+$(document).ready(async () => {
+    /* Scrolls back to homepage */
+    $("html, body").animate({
+        scrollTop: $('.bg-image').offset().top
+    }, 200);
+    /* Scrolls back to homepage */
+
+    await type(); // Starts typing animation
+
+    /* Scrolls to home page on about button click */
+    $("#homepage").click(() => {
+        $("html, body").animate({
+            scrollTop: $('.bg-image').offset().top
+        }, 200);
+    });
+    /* Scrolls to home page on about button click */
+
+    /* Scrolls to about on about button click */
+    $("#about").click(() => {
+        $("html, body").animate({
+            scrollTop: $('.about').offset().top
+        }, 200);
+    });
+    /* Scrolls to about on about button click */
+
+    /* Scrolls to projects on about button click */
+    $("#projects").click(() => {
+        $("html, body").animate({
+            scrollTop: $('.projects').offset().top
+        }, 200);
+    });
+    /* Scrolls to projects on about button click */
+
+    /* Highlights buttons on corresponding sections */
+    $(window).scroll(() => {
+        let scrollPos = $(document).scrollTop();
+
+        if (scrollPos < $('.about').offset().top) {
+            setActiveSection("homepage");
+        } else if (scrollPos < $('.projects').offset().top) {
+            setActiveSection("about");
+        } else {
+            setActiveSection("contact");
+        }
+    });
+    /* Highlights buttons on corresponding sections */
+});
