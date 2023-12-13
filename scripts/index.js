@@ -44,10 +44,12 @@ const type = () => {
 
 let activeSection = "homepage";
 const setActiveSection = (section) => {
+    console.log(activeSection)
     if (section === activeSection) return;
-    if (activeSection) $("#" + activeSection).removeClass(".active");
+    $("#" + activeSection).removeClass("active");
     activeSection = section;
-    $("#" + section).addClass(".active");
+    $("#" + section).addClass("active");
+    console.log(activeSection)
 }
 
 
@@ -84,18 +86,4 @@ $(document).ready(async () => {
         }, 200);
     });
     /* Scrolls to projects on about button click */
-
-    /* Highlights buttons on corresponding sections */
-    $(window).scroll(() => {
-        let scrollPos = $(document).scrollTop();
-
-        if (scrollPos < $('.about').offset().top) {
-            setActiveSection("homepage");
-        } else if (scrollPos < $('.projects').offset().top) {
-            setActiveSection("about");
-        } else {
-            setActiveSection("contact");
-        }
-    });
-    /* Highlights buttons on corresponding sections */
 });
