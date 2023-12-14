@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
     <link rel="stylesheet" type="text/css" href="styles/index.css">
 </head>
+
 <body>
 
-    <div class="main_page">
-        <div class="main_page_text">
-            <!--<h1 id="title">by <span class="typed-text"></span><span class="cursor blink">&nbsp;</span></h1>-->
-            <h1>ekoparadis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at doloremque doloribus harum ipsam natus obcaecati possimus provident quaerat sequi tempora, totam. Eius et nostrum perferendis ratione ut. Earum, ipsa!</p>
-            <!--<button>get started</button>-->
-        </div>
+    <div class="wrapper">
         <div class="navbar">
-            <!--<button id="homepage">home page</button>-->
-            <button id="about">O nas</button>
-            <button id="gallery">Galeria</button>
-            <button id="price">Cennik</button>
-            <button id="contact">Kontakt</button>
-        </div>
+            <a class="logo" href="#"></a>
+            <a class="nav_item" href="#">O nas</a>
+            <a class="nav_item" href="#">Galeria</a>
+            <a class="nav_item" href="#">Cennik</a>
+            <a class="nav_item" href="#">Kontakt</a>
+          </div>
+        <header class="header">
+            <!-- <h1 id="title">by <span class="typed-text"></span><span class="cursor blink">&nbsp;</span></h1> -->
+            <h1 class="title">ekoparadis</h1>
+            <div class="header_text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at doloremque doloribus harum ipsam natus obcaecati possimus provident quaerat sequi tempora, totam. Eius et nostrum perferendis ratione ut. Earum!</p>
+            </div>
+            <button class="start_btn">dowiedz się więcej</button>
+        </header>
+        <main>
+            <section class="section_info">
+                <h2 class="section_title">Park krajobrazowy</h2>
+                <div class="section_text">
+                    <p>
+                        W Parku Krajobrazowym zanurzamy się w piękno dzikiej przyrody. Nasza misja to ochrona ekosystemów i edukacja. Wspólnie tworzymy społeczność, dbając o harmonię między ludźmi a naturą. Dołącz do naszej pasjonującej podróży odkrywania i ochrony.
+                    </p>
+                </div>
+                <div class="images_box">
+                    <img class="left_top" src="./images/justimg.jpg" alt="Stary drewniany domek u podnórzy gór pokrytych gęstymi drzewami iglastymi, przy samym brzegu wielkiego jeziora">
+                    <img class="right_bottom" src="./images/infoimg.jpg" alt="Skalny strumyk wody w środku lasu">
+                </div>
+            </section>
+        </main>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="scripts/index.js"></script>
 
 </body>
+
 </html>
