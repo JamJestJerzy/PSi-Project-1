@@ -9,6 +9,8 @@ $green-section-main-color: #4E6705
 $blue-section-main-color: #041B2B
 $green-section-text-color: #fff
 $blue-section-text-color: #DDD
+$xmark-color: #e21f1f8f
+$check-color: #33ff77
 /* ---------------- [ Variables ] ----------------
 
 
@@ -36,6 +38,9 @@ body, html
   width: 100%
   max-width: 1440px
   overflow: hidden
+
+.different_font
+  font-family: Nunito, Comfortaa, 'Sans-serif'
 
 /* ---------------- [ Global ] ----------------
 
@@ -109,14 +114,15 @@ body, html
   gap: 52px
   position: fixed
   background-color: none
+  z-index: 1000
 
   .logo
     position: absolute
     left: 8%
-    background-image: url('/images/tymczasowy-kabel.jpg') //tymczasowy jpg
+    background-image: url('/images/logo.png')
     background-size: cover
-    width: 100px
-    height: 100px
+    width: 150px
+    height: 120px
 
   .nav_item
     color: black
@@ -134,8 +140,121 @@ body, html
 /* ---------------- [ Navigation Bar ] ----------------
 
 /* ---------------- [ Main ] ----------------
-
 /* ---------------- [ Section Info   ] ----------------
+.section_info
+  display: flex
+  flex-direction: column
+  position: relative
+  justify-content: center
+  align-items: center
+  height: 1200px
+  color: $green-section-text-color
+  background-color: $green-section-main-color
+  .section_title
+    font-size: 48px
+    margin: 40px auto 40px 
+  .section_text
+    margin-bottom: 150px
+    width: 70%  
+    text-align: center
+    p > a
+      color: $green-section-text-color
+      text-decoration: underline
+  .images_box
+    position: relative
+    display: flex
+    width: 80%
+    height: 600px
+    .left_top
+      border-radius: 25px
+      width: 737px
+      height: 490px
+    .right_bottom
+      position: absolute
+      right: 0
+      bottom: 0
+      width: 522px
+      height: 345px
+      border-radius: 15px
+
+.block
+  position: absolute
+  height: 70px
+  width: 55%
+  background-color: $blue-section-main-color
+
+  &_left
+    bottom: 0
+    left: -50px
+    transform: skew(45deg)
 /* ---------------- [ Section Info ] ----------------
+/* ---------------- [ Section Prices ] ----------------
+.section_prices
+  display: flex
+  flex-direction: column
+  position: relative
+  justify-content: center
+  align-items: center
+  height: 1200px
+  color: $blue-section-text-color
+  background-color: $blue-section-main-color
+  .section_title
+    font-size: 48px
+    margin: 40px auto 140px
+  .offers_box
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    width: 80%
+    .offer
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: space-evenly
+      align-items: center
+      width: 511px
+      height: 704px 
+      color: #111
+      background-color: $blue-section-text-color
+      border-radius: 15px
+      box-shadow: 5px 5px 5px #444
+      &_title
+        text-align: center
+        font-size: 38px
+        font-weight: normal
+        width: 70%
+      .price
+        font-size: 50px
+        font-weight: bold
+      .access_list
+        list-style: none
+        line-height: 40px
+        font-size: 22px
+        li
+          padding-left: 10px
+        i
+          font-size: 30px
+        .fa-xmark
+          color: $xmark-color
+        .fa-check
+          color: $check-color
+          font-size: 28px
+        .access_item
+          color: #736e6e
+      .offer_btn
+        width: 329px
+        height: 79px
+        font-size: 30px
+        background-color: $green-section-main-color
+        border-radius: 15px
+        border: none
+        cursor: pointer
+        transition: transform .3s, box-shadow .3s
+        &:hover
+          transform: scale(1.2)
+          box-shadow: 0 0 15px $blue-section-main-color
+
+  
+/* ---------------- [ Section Prices ] ----------------
 
 /* ---------------- [ Main ] ----------------

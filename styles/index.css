@@ -30,6 +30,10 @@ body, html {
   overflow: hidden;
 }
 
+.different_font {
+  font-family: Nunito, Comfortaa, "Sans-serif";
+}
+
 /* ---------------- [ Global ] ---------------- */
 /* ---------------- [ Header ] ---------------- */
 .header {
@@ -99,14 +103,15 @@ body, html {
   gap: 52px;
   position: fixed;
   background-color: none;
+  z-index: 1000;
 }
 .navbar .logo {
   position: absolute;
   left: 8%;
-  background-image: url("/images/tymczasowy-kabel.jpg");
+  background-image: url("/images/logo.png");
   background-size: cover;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 120px;
 }
 .navbar .nav_item {
   color: black;
@@ -124,5 +129,141 @@ body, html {
 /* ---------------- [ Navigation Bar ] ---------------- */
 /* ---------------- [ Main ] ---------------- */
 /* ---------------- [ Section Info   ] ---------------- */
+.section_info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 1200px;
+  color: #fff;
+  background-color: #4E6705;
+}
+.section_info .section_title {
+  font-size: 48px;
+  margin: 40px auto 40px;
+}
+.section_info .section_text {
+  margin-bottom: 150px;
+  width: 70%;
+  text-align: center;
+}
+.section_info .section_text p > a {
+  color: #fff;
+  text-decoration: underline;
+}
+.section_info .images_box {
+  position: relative;
+  display: flex;
+  width: 80%;
+  height: 600px;
+}
+.section_info .images_box .left_top {
+  border-radius: 25px;
+  width: 737px;
+  height: 490px;
+}
+.section_info .images_box .right_bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 522px;
+  height: 345px;
+  border-radius: 15px;
+}
+
+.block {
+  position: absolute;
+  height: 70px;
+  width: 55%;
+  background-color: #041B2B;
+}
+.block_left {
+  bottom: 0;
+  left: -50px;
+  transform: skew(45deg);
+}
+
 /* ---------------- [ Section Info ] ---------------- */
+/* ---------------- [ Section Prices ] ---------------- */
+.section_prices {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 1200px;
+  color: #DDD;
+  background-color: #041B2B;
+}
+.section_prices .section_title {
+  font-size: 48px;
+  margin: 40px auto 140px;
+}
+.section_prices .offers_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+}
+.section_prices .offers_box .offer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 511px;
+  height: 704px;
+  color: #111;
+  background-color: #DDD;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #444;
+}
+.section_prices .offers_box .offer_title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: normal;
+  width: 70%;
+}
+.section_prices .offers_box .offer .price {
+  font-size: 50px;
+  font-weight: bold;
+}
+.section_prices .offers_box .offer .access_list {
+  list-style: none;
+  line-height: 40px;
+  font-size: 22px;
+}
+.section_prices .offers_box .offer .access_list li {
+  padding-left: 10px;
+}
+.section_prices .offers_box .offer .access_list i {
+  font-size: 30px;
+}
+.section_prices .offers_box .offer .access_list .fa-xmark {
+  color: rgba(226, 31, 31, 0.5607843137);
+}
+.section_prices .offers_box .offer .access_list .fa-check {
+  color: #33ff77;
+  font-size: 28px;
+}
+.section_prices .offers_box .offer .access_list .access_item {
+  color: #736e6e;
+}
+.section_prices .offers_box .offer .offer_btn {
+  width: 329px;
+  height: 79px;
+  font-size: 30px;
+  background-color: #4E6705;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.section_prices .offers_box .offer .offer_btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px #041B2B;
+}
+
+/* ---------------- [ Section Prices ] ---------------- */
 /* ---------------- [ Main ] ---------------- *//*# sourceMappingURL=index.css.map */
