@@ -12,21 +12,24 @@
 <body>
 
     <div class="wrapper">
-        <div class="navbar">
-            <a class="logo" href="#"></a>
-            <a class="nav_item" href="#">O nas</a>
-            <a class="nav_item" href="#">Galeria</a>
-            <a class="nav_item" href="#">Cennik</a>
-            <a class="nav_item" href="#">Kontakt</a>
-          </div>
+        <nav>
+            <div class="navbar ">
+                <a class="logo" href="#"><p>EKOPARADIS</p></a>
+                <a class="nav_item" href="about.html">O nas</a>
+                <a class="nav_item" href="gallery.html">Galeria</a>
+                <a class="nav_item" href="#prices_anchor">Cennik</a>
+                <a class="nav_item" href="#contact_anchor">Kontakt</a>
+              </div>
+        </nav>
         <header class="header">
             <!-- <h1 id="title">by <span class="typed-text"></span><span class="cursor blink">&nbsp;</span></h1> -->
             <h1 class="title">ekoparadis</h1>
             <div class="header_text">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at doloremque doloribus harum ipsam natus obcaecati possimus provident quaerat sequi tempora, totam. Eius et nostrum perferendis ratione ut. Earum!</p>
             </div>
-            <button class="start_btn">dowiedz się więcej</button>
+            <a href="#info" class="start_btn">dowiedz się więcej</a>
         </header>
+        <a id="info"></a>
         <main>
             <section class="section_info">
                 <h2 class="section_title">Park krajobrazowy</h2>
@@ -40,6 +43,7 @@
                     <img class="right_bottom" src="./images/infoimg.jpg" alt="Skalny strumyk wody w środku lasu">
                 </div>
                 <div class="block block_left"></div>
+                <a id="prices_anchor"></a>
             </section>
             <section class="section_prices">
                 <h2 class="section_title">Cennik</h2>
@@ -75,11 +79,59 @@
                     
                 </div>
             </section>
+            <section class="end_section">
+                <div class="section_contact">
+                    <i class="fa-regular fa-paper-plane"></i>
+                    <p>Subskrybuj aby być na bieżąco!</p>
+                    <div class="input_box">
+                        <input class="input" type="text" placeholder="wpisz adres email...">
+                        <button class="contact_btn different_font">zapisuje się</button>
+                    </div>
+                    <a id="contact_anchor"></a>
+                    <div class="contact_container">
+                        <div class="box">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h3 class="title different_font">adres</h3>
+                            <div class="line"></div>
+                            <div class="content">25°00'01"N 71°00'01"W</div>
+                        </div>
+                        <div class="box">
+                            <i class="fa-regular fa-envelope"></i>
+                            <h3 class="title different_font">email</h3>
+                            <div class="line"></div>
+                            <div class="content">helloworld@easteregg.com</div>
+                        </div>
+                        <div class="box">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <h3 class="title different_font">telefon</h3>
+                            <div class="line"></div>
+                            <div class="content">+48  999 998 997 </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section_footer">
+                    <div class="socials_box">
+                        <div class="social">
+                            <a href=""></a>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <div class="social">
+                            <a href=""></a>
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </div>
+                        <div class="social">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                    </div>
+                    <p>Copyright &copy; EKOPARADIS <span class="footer_year"></span></p>
+                </div>
+            </section>
         </main>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="scripts/index.js"></script>
+    <script src="scripts/currentYear.js"></script>
 
 </body>
 

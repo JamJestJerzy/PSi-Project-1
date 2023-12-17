@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa");
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
 /* ---------------- [ Variables ] ---------------- */
 /* ---------------- [ Variables ] ---------------- */
 /* ---------------- [ Global ] ---------------- */
@@ -31,7 +32,23 @@ body, html {
 }
 
 .different_font {
-  font-family: Nunito, Comfortaa, "Sans-serif";
+  font-family: Nunito, Comfortaa, "Sans-serif", sans-serif;
+}
+
+::-moz-placeholder {
+  font-size: 16px;
+  padding: 6px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #707070;
+}
+
+::placeholder {
+  font-size: 16px;
+  padding: 6px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #707070;
 }
 
 /* ---------------- [ Global ] ---------------- */
@@ -43,7 +60,6 @@ body, html {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-size: cover;
   color: #000;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 50%, rgba(0, 0, 0, 0.35) 0%, rgba(255, 255, 255, 0.3) 100%), url("/images/background.jpg");
   background-size: cover;
@@ -65,6 +81,9 @@ body, html {
 }
 
 .start_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 10%;
   background: #DDD;
@@ -76,7 +95,7 @@ body, html {
   font-size: 18px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-align: center;
+  text-decoration: none;
   color: black;
   transition: color 0.4s, transform 0.3s, border-radius 0.4s, box-shadow 0.4s, background 0.4s;
   cursor: pointer;
@@ -93,7 +112,6 @@ body, html {
 /* ---------------- [ Header ] ---------------- */
 /* ---------------- [ Navigation Bar ] ---------------- */
 .navbar {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,16 +120,24 @@ body, html {
   max-width: 1440px;
   gap: 52px;
   position: fixed;
-  background-color: none;
+  background: none;
   z-index: 1000;
+  transition: color 0.4s;
 }
 .navbar .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   left: 8%;
   background-image: url("/images/logo.png");
   background-size: cover;
+  font-size: 0;
   width: 150px;
   height: 120px;
+}
+.navbar .logo p {
+  position: absolute;
 }
 .navbar .nav_item {
   color: black;
@@ -124,6 +150,48 @@ body, html {
 }
 .navbar .nav_item:hover {
   scale: 1.5;
+}
+
+.bluemini {
+  height: 70px;
+  background-color: rgba(4, 27, 43, 0.8);
+  transition: 0.8s;
+}
+.bluemini .logo {
+  height: 100%;
+  background-image: none;
+  font-size: 28px;
+  font-family: "Black Ops One", "Comfortaa", "Sans-serif";
+  color: #DDD;
+  transition: 2s;
+}
+.bluemini .nav_item {
+  color: #DDD;
+  font-size: 16px;
+  transition: 1s;
+}
+
+.greenmini {
+  height: 70px;
+  background-color: rgba(78, 103, 5, 0.8);
+  transition: 0.8s;
+}
+.greenmini .logo {
+  height: 100%;
+  background-image: none;
+  font-size: 28px;
+  font-family: "Black Ops One", "Comfortaa", "Sans-serif";
+  color: #fff;
+  transition: 2s;
+}
+.greenmini .nav_item {
+  color: #fff;
+  font-size: 16px;
+  transition: 1s;
+}
+.greenmini .active {
+  color: #041B2B;
+  text-shadow: 0 0 5px #041B2B;
 }
 
 /* ---------------- [ Navigation Bar ] ---------------- */
@@ -185,6 +253,46 @@ body, html {
 }
 
 /* ---------------- [ Section Info ] ---------------- */
+.section_about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #DDD;
+  background-color: #041B2B;
+}
+.section_about .section_title {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.section_about .section_text {
+  margin: 20px 0 100px 0;
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
+}
+.section_about .section_text_two {
+  width: 70%;
+  text-align: center;
+  font-size: 18px;
+}
+.section_about .line_one {
+  background: #4E6705;
+  width: 20%;
+  height: 3px;
+  border-radius: 8px;
+  margin-bottom: 70px;
+}
+.section_about .line_two {
+  background: #4E6705;
+  width: 70%;
+  height: 3px;
+  border-radius: 8px;
+  margin-bottom: 70px;
+}
+
 /* ---------------- [ Section Prices ] ---------------- */
 .section_prices {
   display: flex;
@@ -266,4 +374,153 @@ body, html {
 }
 
 /* ---------------- [ Section Prices ] ---------------- */
-/* ---------------- [ Main ] ---------------- *//*# sourceMappingURL=index.css.map */
+/* ---------------- [ Section Contact ] ---------------- */
+.section_contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  min-height: 974px;
+  z-index: 999;
+  width: 100%;
+}
+.section_contact .fa-paper-plane {
+  font-size: 55px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.section_contact p {
+  text-align: center;
+  font-size: 30px;
+  color: #DDD;
+  margin-bottom: 38px;
+}
+.section_contact .input_box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+}
+.section_contact .input_box .input {
+  width: 45%;
+  margin-right: 50px;
+  background-color: #D9D9D9;
+  border-radius: 8px;
+  border: none;
+  padding: 8px 138px 8px 34px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.section_contact .input_box .contact_btn {
+  width: 20%;
+  border: none;
+  border-radius: 10px;
+  background: rgba(78, 103, 5, 0.3);
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.section_contact .input_box .contact_btn_active {
+  background: rgba(78, 103, 5, 0.3);
+  cursor: pointer;
+}
+.section_contact .contact_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 240px;
+  margin-top: 278px;
+}
+.section_contact .contact_container .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 395px;
+  height: 237px;
+  border-radius: 8px;
+  background-color: #DDD;
+}
+.section_contact .contact_container .box i {
+  font-size: 30px;
+  margin-bottom: 12px;
+  color: #64A19D;
+}
+.section_contact .contact_container .box .title {
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 5px;
+  font-weight: lighter;
+  color: #000;
+  padding-left: 7px;
+}
+.section_contact .contact_container .box .line {
+  background: #64A19D;
+  width: 50px;
+  height: 4px;
+  border-radius: 8px;
+  margin: 27px 0;
+}
+.section_contact .contact_container .box .content {
+  color: #747474;
+}
+
+/* ---------------- [ Section Contact ] ---------------- */
+/* ---------------- [ Main ] ---------------- */
+/* ---------------- [ End & Footer ] ---------------- */
+.end_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 1400px;
+  background-image: linear-gradient(180deg, rgba(5, 28, 44, 0.7) 0%, rgba(0, 0, 0, 0.7) 44.37%, #000 90%), url("/images/footerimg.jpg");
+  background-size: cover;
+}
+
+.section_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 406px;
+  width: 100%;
+  font-size: 20px;
+  color: #6e6e6e;
+  z-index: 999;
+}
+.section_footer .socials_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 395px;
+}
+.section_footer .socials_box .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+  font-size: 30px;
+  color: rgba(110, 110, 110, 0.537254902);
+  margin-bottom: 84px;
+  border-radius: 50px;
+  background-color: #1A1A1A;
+  cursor: pointer;
+}
+
+/* ---------------- [ End & Footer ] ---------------- */
+.curiosities {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 1800px;
+  background-color: #041B2B;
+}
+.curiosities .title {
+  font-size: 48px;
+  color: #DDD;
+  letter-spacing: 2px;
+}/*# sourceMappingURL=index.css.map */
