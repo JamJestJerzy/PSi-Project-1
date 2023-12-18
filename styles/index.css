@@ -582,4 +582,28 @@ body, html {
 .reverse {
   display: flex;
   flex-direction: row-reverse;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 100px;
+  margin-left: 10px;
+  background: #fff;
+  box-shadow: 0 0 7px lime;
+}
+
+.cursor.blink {
+  animation: blink 0.8s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    background: #fff;
+    box-shadow: 0 0 7px lime;
+  }
+  40%, 50% {
+    background: transparent;
+    box-shadow: none;
+  }
 }/*# sourceMappingURL=index.css.map */
