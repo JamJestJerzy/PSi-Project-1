@@ -1,3 +1,4 @@
+// changeNavigation
 const nav = document.querySelector('.navbar')
 
 const handleNav = () => {
