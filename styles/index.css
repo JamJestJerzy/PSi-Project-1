@@ -32,7 +32,7 @@ body, html {
 }
 
 .different_font {
-  font-family: Nunito, Comfortaa, "Sans-serif", sans-serif;
+  font-family: Nunito, Comfortaa, "Sans-serif";
 }
 
 ::-moz-placeholder {
