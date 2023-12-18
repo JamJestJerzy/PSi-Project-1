@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <script src="https://kit.fontawesome.com/6330ee0da9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <nav>
+            <div class="navbar greenmini">
+                <a class="logo" href="/index.html">
+                    <p>EKOPARADIS</p>
+                </a>
+                <a class="nav_item" href="/about.html">O nas</a>
+                <a class="nav_item active" href="#">Ciekawostki</a>
+                <a class="nav_item" href="#contact_anchor">Kontakt</a>
+            </div>
+        </nav>
+        <main>
+            <section class="section_curiosities">
+                <h2 class="section_title">Ciekawostki</h2>
+                <div class="line"></div>
+                <div class="curiosities_box">
+                    <div class="curio">
+                        <div class="curio_text">
+                            <h3>Czaple Białe</h3>
+                            <p>Czapla biała potrafi poruszać się niewidocznie wśród trzcin. Jej szyja jest tak elastyczna, że może błyskawicznie wydłużyć się, zaskakując zdobycz.</p>
+                        </div>
+                        <img src="/images/czaple.jpg" alt="stado czapl lecących nad wodą w promieniach pomarańczowego slońca">
+                    </div>
+                    <div class="curio reverse">
+                        <div class="curio_text">
+                            <h3>Płuca Ziemi</h3>
+                            <p>Lasy są "płucami ziemi", absorbując dwutlenek węgla podczas fotosyntezy. Jedno dużo drzewo może dostarczyć tlenu dla czterech osób przez rok.</p>
+                        </div>
+                        <img src="/images/las.jpg" alt="droga w lesie na ktorą padają promienie slońca przebijające się przez korony drzew">
+                    </div>
+                    <div class="curio">
+                        <div class="curio_text">
+                            <h3>Świat Grzybów</h3>
+                            <p>Największym znanym organizmem na Ziemi jest grzyb "Armillaria ostoyae", rosnący w lasach stanu Oregon w USA. Jego rozległość wynosi ponad 880 hektarów.</p>
+                        </div>
+                        <img src="/images/grzyb.jpg" alt="mikro grzyb na patyku obrośniętym mchem (widok spod mikroskopu)">
+                    </div>
+                </div>
+            </section>
+            <section class="end_section">
+                <div class="section_contact">
+                    <i class="fa-regular fa-paper-plane"></i>
+                    <p>Subskrybuj aby być na bieżąco!</p>
+                    <div class="input_box">
+                        <input class="input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="wpisz adres email..." required>
+                        <button class="contact_btn different_font" disabled>zapisuje się</button>
+                    </div>
+                    <a id="contact_anchor"></a>
+                    <div class="contact_container">
+                        <div class="box">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h3 class="title different_font">adres</h3>
+                            <div class="line"></div>
+                            <div class="content">25°00'01"N 71°00'01"W</div>
+                        </div>
+                        <div class="box">
+                            <i class="fa-regular fa-envelope"></i>
+                            <h3 class="title different_font">email</h3>
+                            <div class="line"></div>
+                            <div class="content">helloworld@easteregg.com</div>
+                        </div>
+                        <div class="box">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <h3 class="title different_font">telefon</h3>
+                            <div class="line"></div>
+                            <div class="content">+48 999 998 997 </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section_footer">
+                    <div class="socials_box">
+                        <div class="social">
+                            <a href=""></a>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <div class="social">
+                            <a href=""></a>
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </div>
+                        <div class="social">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                    </div>
+                    <p>Copyright &copy; EKOPARADIS <span class="footer_year"></span></p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="scripts/currentYear.js"></script>
+</body>
+
+</html>
