@@ -1,3 +1,8 @@
+const info_section = $('.section_info');
+const prices_section = $('.section_prices');
+const header = $('.header');
+const navbar = $('.navbar');
+
 const scrollTo = (section) => {
     $("html, body").animate({
         scrollTop: $(section).offset().top
@@ -13,28 +18,17 @@ $(document).ready(() => {
         scrollTo(".section_info");
     })
 
-    const sectionInfo = $('.section_info');
-    const sectionPrices = $('.section_prices');
-    const navbar = $('.navbar');
-    const firstPage = $('body,html');
-    const blueSectionColor = 'blue-section-main-color';
-    const greenSectionColor = 'green-section-main-color';
-
     $(window).on('scroll', function() {
         const scrollPosition = $(window).scrollTop();
-        const sectionInfoOffset = sectionInfo.offset().top;
-        const sectionInfoHeight = sectionInfo.outerHeight();
-        const sectionInfoCenter = sectionInfoOffset + sectionInfoHeight / 2;
-        const sectionPricesOffset = sectionPrices.offset().top
-        const firstPageHeight = firstPage.height();
-        const upperHalf = firstPageHeight / 2;
 
-        if (scrollPosition < upperHalf) {
-            navbar.removeClass(blueSectionColor).removeClass(greenSectionColor);
-        } else if (scrollPosition > sectionInfoCenter && scrollPosition < sectionPricesOffset) {
-            navbar.removeClass(blueSectionColor).addClass(greenSectionColor);
+        if (scrollPosition >= header.offset().top/2 && scrollPosition < info_section.offset().top/2) {
+            navbar.removeClass("blue-section-main-color").removeClass("green-section-main-color");
+        } else if (scrollPosition >= info_section.offset().top && scrollPosition < prices_section.offset().top) {
+            navbar.removeClass("green-section-main-color").addClass("blue-section-main-color");
+        } else if (scrollPosition >= prices_section.offset().top) {
+            navbar.removeClass("blue-section-main-color").addClass("green-section-main-color");
         } else {
-            navbar.removeClass(greenSectionColor).addClass(blueSectionColor);
+            navbar.removeClass("green-section-main-color").addClass("blue-section-main-color");
         }
     });
 })
