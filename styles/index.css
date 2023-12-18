@@ -156,6 +156,8 @@ body, html {
   height: 70px;
   background-color: rgba(4, 27, 43, 0.8);
   transition: 0.8s;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 .bluemini .logo {
   height: 100%;
@@ -175,6 +177,8 @@ body, html {
   height: 70px;
   background-color: rgba(78, 103, 5, 0.8);
   transition: 0.8s;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 .greenmini .logo {
   height: 100%;
